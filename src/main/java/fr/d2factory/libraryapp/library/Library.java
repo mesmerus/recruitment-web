@@ -38,4 +38,13 @@ public interface Library {
      * @see Member#payBook(int)
      */
     void returnBook(Book book, Member member, BookRepository bookRepository);
+    
+    /**
+     * 
+     * @param book
+     * @param member
+     * @param bookRepository
+     * @return
+     */
+    int borrowDays(Book book, Member member, BookRepository bookRepository);
 }

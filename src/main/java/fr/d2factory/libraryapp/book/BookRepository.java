@@ -60,7 +60,12 @@ public class BookRepository {
      * @param book
      */
     public void removeBorrowedBook(Book book) {
-    	borrowedBooks.remove(book);
+    	for (Map.Entry<Book, Borrow> aBook : borrowedBooks.entrySet()) {
+            if(book.getIsbn().getIsbnCode()==aBook.getKey().getIsbn().isbnCode) {
+            	borrowedBooks.remove(aBook.getKey());
+            	break;
+            }
+        }
     }
 
 	public Map<ISBN, Book> getAvailableBooks() {
