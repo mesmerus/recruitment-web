@@ -327,7 +327,7 @@ public class LibraryTest {
     @Test
     public void members_cannot_borrow_book_if_they_have_late_books(){
     	//create an anonymous member
-       	Member member = new Member("amelie", "DUTOUT" , 50, "resident", false) {
+       	Member member = new Member("amelie", "DUTOUT" , 50, "member", false) {
        		private int maxDays = 60;
        		private float initialTarif = 0.10f;
        		private float lateTarif = 0.20f;
