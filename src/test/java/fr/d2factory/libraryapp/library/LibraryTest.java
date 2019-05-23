@@ -74,7 +74,7 @@ public class LibraryTest {
     @Test
     public void member_can_borrow_a_book_if_book_is_available(){
         //create an anonymous member
-    	Member member = new Member("laurent", "DUPONT" , 200, "resident", false) {
+    	Member member = new Member("laurent", "DUPONT" , 200, "member", false) {
        		private int maxDays = 60;
        		private float initialTarif = 0.10f;
        		private float lateTarif = 0.20f;
@@ -102,7 +102,7 @@ public class LibraryTest {
     @Test
     public void borrowed_book_is_no_longer_available(){
     	//create an anonymous member
-    	Member member = new Member("laurent", "DUPONT" , 200, "resident", false) {
+    	Member member = new Member("laurent", "DUPONT" , 200, "member", false) {
        		private int maxDays = 60;
        		private float initialTarif = 0.10f;
        		private float lateTarif = 0.20f;
