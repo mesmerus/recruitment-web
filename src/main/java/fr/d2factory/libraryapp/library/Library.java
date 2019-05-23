@@ -1,6 +1,7 @@
 package fr.d2factory.libraryapp.library;
 
 import fr.d2factory.libraryapp.book.Book;
+import fr.d2factory.libraryapp.book.BookRepository;
 import fr.d2factory.libraryapp.member.Member;
 
 import java.time.LocalDate;
@@ -25,7 +26,7 @@ public interface Library {
      * @see fr.d2factory.libraryapp.book.ISBN
      * @see Member
      */
-    Book borrowBook(long isbnCode, Member member, LocalDate borrowedAt) throws HasLateBooksException;
+    Book borrowBook(long isbnCode, Member member, LocalDate borrowedAt , BookRepository bookRepository) throws HasLateBooksException;
 
     /**
      * A member returns a book to the library.
@@ -36,5 +37,5 @@ public interface Library {
      *
      * @see Member#payBook(int)
      */
-    void returnBook(Book book, Member member);
+    void returnBook(Book book, Member member, BookRepository bookRepository);
 }
